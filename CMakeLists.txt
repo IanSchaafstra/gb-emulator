@@ -10,6 +10,9 @@ file(GLOB_RECURSE SOURCES "src/*.cpp")
 
 # target executable
 add_executable(${CMAKE_PROJECT_NAME} ${SOURCES})
+add_executable(${CMAKE_PROJECT_NAME} ${SOURCES}
+        include/registers.h
+)
 
 # include own headers
 target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC include)
